@@ -8,13 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-
-	private final ItemService itemService;
-
 	@Autowired
-	public HomeController(ItemService itemService) {
-		this.itemService = itemService;
-	}
+	private ItemService itemService;
 
 	@GetMapping
 	public String indexPage(Model model) {
